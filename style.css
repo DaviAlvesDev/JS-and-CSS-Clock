@@ -1,0 +1,112 @@
+:root{
+    --bg-image: url(bg-am.jpeg);
+    --text-color: whitesmoke;
+    --pointer-color: black;
+
+    --hr-angle: 0deg;
+    --min-angle: 0deg;
+    --sec-angle: 0deg;
+}
+
+.pm {
+    --bg-image: url(bg-pm.jpg);
+    --text-color: black;
+    --pointer-color: whitesmoke;
+}
+
+body{
+    height: 100vh;
+    background: var(--bg-image) no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 8px;
+    
+}
+
+div{
+    transition: all 0.2s;
+}
+
+#clock{
+    width: 300px;
+    height: 300px;
+    border: 10px solid var(--text-color);
+    border-radius: 50%;
+}
+
+#hour{
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    background-color: var(--pointer-color);
+
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    z-index: 3;
+    transform-origin: center left;
+    transform: 
+    translate(0, -50%)
+    rotate(calc(-90deg + var(--hr-angle)));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#min{
+    position: absolute;
+    width: 140px;
+    height: 10px;
+    background-color: var(--pointer-color);
+
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform-origin: center left;
+    transform:
+    translate(0, -50%) 
+    rotate(calc(-90deg + var(--min-angle)));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec{
+    position: absolute;
+    width: 130px;
+    height: 8px;
+    font-size: 7px;
+    background-color: var(--pointer-color);
+
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    z-index: 1;
+    transform-origin: center left;
+    transform: 
+    translate(0, -50%)
+    rotate(calc(-90deg + var(--sec-angle)));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#point{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--pointer-color);
+
+    transform-origin: center left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
