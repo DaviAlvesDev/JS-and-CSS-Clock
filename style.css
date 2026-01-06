@@ -1,5 +1,5 @@
 :root{
-    --bg-image: url(bg-am.jpeg);
+    --bg-image: url(./assets/bg-am.jpeg);
     --text-color: whitesmoke;
     --pointer-color: black;
 
@@ -9,7 +9,7 @@
 }
 
 .pm {
-    --bg-image: url(bg-pm.jpg);
+    --bg-image: url(./assets/bg-pm.jpg);
     --text-color: black;
     --pointer-color: whitesmoke;
 }
