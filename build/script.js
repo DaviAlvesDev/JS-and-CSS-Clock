@@ -16,9 +16,16 @@ function pointers_movement() {
     const hour = moment.getHours();
     const min = moment.getMinutes();
     const sec = moment.getSeconds();
-    const hour_angle = ((360 / 12) * hour) + ((30 / 60) * min);
-    const min_angle = (360 / 60) * min;
-    const sec_angle = (360 / 60) * sec;
+    let hour_angle = ((360 / 12) * hour) + ((30 / 60) * min);
+    let min_angle = (360 / 60) * min;
+    let sec_angle = (360 / 60) * sec;
+    const point = document.querySelector('#point');
+    if (sec_angle == 0) {
+        point.classList.add('no-anim');
+    }
+    else {
+        point.classList.remove('no-anim');
+    }
     document.documentElement.style.setProperty('--hr-angle', `${hour_angle}deg`);
     document.documentElement.style.setProperty('--min-angle', `${min_angle}deg`);
     document.documentElement.style.setProperty('--sec-angle', `${sec_angle}deg`);

@@ -18,10 +18,13 @@ function pointers_movement() {
     const min:number = moment.getMinutes()
     const sec:number = moment.getSeconds()
 
-    const hour_angle:number = ((360/12) * hour) + ((30/60) * min)
-    const min_angle:number = (360/60) * min
-    const sec_angle:number = (360/60) * sec
+    let hour_angle:number = ((360/12) * hour) + ((30/60) * min)
+    let min_angle:number = (360/60) * min
+    let sec_angle:number = (360/60) * sec
 
+    const point = document.querySelector('#point') as HTMLDivElement
+    if(sec_angle == 0) {point.classList.add('no-anim')} 
+    else {point.classList.remove('no-anim')}
 
     document.documentElement.style.setProperty('--hr-angle', `${hour_angle}deg`)
 

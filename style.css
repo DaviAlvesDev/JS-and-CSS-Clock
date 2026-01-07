@@ -30,6 +30,12 @@ div{
     transition: all 0.2s;
 }
 
+.no-anim,
+.no-anim * {
+  transition: none !important;
+}
+
+
 #clock{
     width: 300px;
     height: 300px;
@@ -44,7 +50,6 @@ div{
     background-color: var(--pointer-color);
 
     top: 50%;
-    transform: translateY(-50%);
     left: 50%;
     z-index: 3;
     transform-origin: center left;
@@ -84,7 +89,6 @@ div{
     background-color: var(--pointer-color);
 
     top: 50%;
-    transform: translateY(-50%);
     left: 50%;
     z-index: 1;
     transform-origin: center left;
